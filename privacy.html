@@ -1,195 +1,120 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr-CA">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <title class="lang" key="title">LEGARE &amp; SONS</title>
-
-    <!-- Bootstrap CSS -->
+    <title>Politique de confidentialité | Légaré et Fils</title>
+    <meta name="description" content="Politique de confidentialité de Légaré et Fils.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="Content/Style.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="http://www.legare.ca/favicon.ico">
+    <link rel="icon" type="image/png" href="Images/favicon.png" />
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-toggleable-md navbar-light sticky-top" style="background-color: #ECEEEF">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#starNavbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded sticky-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#starNavbar" aria-controls="starNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="Images/LogoP_Légaré.png" alt="logo" /></a>
+        <a class="navbar-brand" href="index.html"><img src="Images/LogoP_Légaré.png" alt="Légaré et Fils"/></a>
         <div class="collapse navbar-collapse" id="starNavbar">
             <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" data-lang-fr="Accueil" data-lang-en="Home"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link lang" key="navServices" href="services.html">SERVICES</a>
+                    <a class="nav-link" href="services.html" data-lang-fr="Services" data-lang-en="Services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link lang" key="navAbout" href="about.html">ABOUT US</a>
+                    <a class="nav-link" href="about.html" data-lang-fr="À propos" data-lang-en="About Us">À propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link lang" key="navContact" href="contact.html">CONTACT US</a>
+                    <a class="nav-link" href="contact.html" data-lang-fr="Contact" data-lang-en="Contact">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle lang" key="navLink" href="http://multibits.ca" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        MORE LINK
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang-fr="Nos entreprises" data-lang-en="Our Companies">Nos entreprises</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" id="premier" href="http://multibits.ca">Multibits inc.</a>
-                        <a class="dropdown-item" id="deuxième" href="http://jesuisungenie.com">Je Suis Un Génie</a>
-                        <a class="dropdown-item" id="troisième" href="http://plancherconfort.com">Plancher Confort Légaré inc.</a>
+                        <a class="dropdown-item" href="https://multibits.ca" target="_blank" rel="noopener">Multibits Inc.</a>
+                        <a class="dropdown-item" href="https://jesuisungenie.com" target="_blank" rel="noopener">Je Suis Un Génie</a>
+                        <a class="dropdown-item" href="https://plancherconfort.com" target="_blank" rel="noopener">Plancher Confort Légaré Inc.</a>
                     </div>
                 </li>
             </ul>
-            <h6><i class="navbar-text fa fa-phone"></i>&nbsp; (514) 990-2993&nbsp;&nbsp;&nbsp;</h6>
-            <h6><i class="navbar-text fa fa-envelope-o"></i>&nbsp; <a href="mailto:info@legare.ca">web@legare.ca</a>&nbsp;&nbsp;&nbsp;&nbsp;</h6>
-            <button class="btn btn-primary btn-sm" key="navConnexion" type="submit"><i class="fa fa-user-o"></i></button>&nbsp;
-            <button id="langue" class="btn btn-primary btn-sm translate lang" key="navLangue" type="submit">Français</button>&nbsp;
+            <span class="navbar-text mr-3"><i class="fa fa-phone"></i>&nbsp;(514) 990-2993</span>
+            <span class="navbar-text mr-3"><i class="fa fa-envelope-o"></i>&nbsp;<a href="mailto:info@legare.ca">info@legare.ca</a></span>
+            <button id="langToggle" class="btn btn-outline-primary btn-sm" type="button">English</button>
         </div>
     </nav>
 
-    <!-- Privacy -->
     <section id="privacy">
         <div class="section-content">
             <div class="container">
-                <h3 class="lang" key="privacy1">PRIVACY POLICY</h3>
-                <p class="lead lang" key="privacyText1">
-                    This privacy policy has been compiled to better serve those who are concerned with how their ‘Personally identifiable information’ (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
+                <h3 data-lang-fr="Politique de confidentialité" data-lang-en="Privacy Policy">Politique de confidentialité</h3>
+                <p class="lead" data-lang-fr="Légaré et Fils respecte la vie privée des visiteurs de ce site web. Cette politique explique quelles informations nous recueillons et comment nous les utilisons." data-lang-en="Légaré et Fils respects the privacy of this website's visitors. This policy explains what information we collect and how we use it.">
+                    Légaré et Fils respecte la vie privée des visiteurs de ce site web. Cette politique explique quelles informations nous recueillons et comment nous les utilisons.
                 </p>
-                <h5 class="lang" key="privacy2">What personal information do we collect from the people that visit our blog, website or app?</h5>
-                <p class="lead lang" key="privacyText2">
-                    When using our site, as appropriate, you may be asked to enter your name, email address or other details to help you with your experience.
+
+                <h5 data-lang-fr="Quelles informations recueillons-nous?" data-lang-en="What information do we collect?">Quelles informations recueillons-nous?</h5>
+                <p class="lead" data-lang-fr="Ce site est une vitrine d'information et ne comporte aucun formulaire de collecte de données. Si vous nous contactez par téléphone ou par courriel, nous recueillons uniquement les renseignements que vous nous fournissez volontairement (nom, coordonnées, contenu de votre message) afin de répondre à votre demande." data-lang-en="This site is an informational showcase and does not include any data collection form. If you contact us by phone or email, we only collect the information you voluntarily provide (name, contact details, message content) in order to respond to your request.">
+                    Ce site est une vitrine d'information et ne comporte aucun formulaire de collecte de données. Si vous nous contactez par téléphone ou par courriel, nous recueillons uniquement les renseignements que vous nous fournissez volontairement (nom, coordonnées, contenu de votre message) afin de répondre à votre demande.
                 </p>
-                <h5 class="lang" key="privacy3">How do we use your information?</h5>
-                <p>
-                    <a class="lead lang" key="privacyText3.1">We may use the information we collect from you when you register, sign up for our newsletter, unlock the content, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:</a>
-                    <br />
-                    <br />
-                    <a class="lead lang" key="privacyText3.2">• To personalize user’s experience and to allow us to deliver the type of content and product offerings in which you are most interested</a>
-                    <br />
-                    <a class="lead lang" key="privacyText3.3">• To improve our website in order to better serve you.</a>
-                    <br />
-                    <a class="lead lang" key="privacyText3.4">• To allow us to better service you in responding to your customer service requests.</a>
-                    <br />
-                    <a class="lead lang" key="privacyText3.5">• To administer a contest, promotion, survey or other site feature.</a>
-                    <br />
-                    <a class="lead lang" key="privacyText3.6">• To send periodic emails regarding your order or other products and services.</a>
-                 </p>
-                <h5 class="lang" key="privacy4">Do we use ‘cookies’?</h5>
-                <p>
-                    <strong>
-                    <a class="lead lang" key="privacyText4.1">NO.</a>
-                    </strong>
-                    <a class="lead lang" key="privacyText4.2">But we use Local Storage.</a>
-                </p>    
-                <h5 class="lang" key="privacy5">Why we use Local Storage?</h5>
-                <p>
-                    <a class="lead lang" key="privacyText5.1">• To keep you language preferences during your visit.</a>
-                    <br />
-                    <a class="lead lang" key="privacyText5.2">• It' automaticly erase when you close your browser.</a>
+
+                <h5 data-lang-fr="Témoins (cookies) et stockage local" data-lang-en="Cookies and local storage">Témoins (cookies) et stockage local</h5>
+                <p class="lead" data-lang-fr="Ce site n'utilise pas de témoins de suivi publicitaire. Nous utilisons uniquement le stockage local de votre navigateur (localStorage) pour mémoriser votre préférence de langue (français/anglais) d'une page à l'autre. Cette information reste uniquement sur votre appareil et n'est jamais transmise à nos serveurs." data-lang-en="This site does not use advertising tracking cookies. We only use your browser's local storage (localStorage) to remember your language preference (French/English) between pages. This information stays only on your device and is never transmitted to our servers.">
+                    Ce site n'utilise pas de témoins de suivi publicitaire. Nous utilisons uniquement le stockage local de votre navigateur (localStorage) pour mémoriser votre préférence de langue (français/anglais) d'une page à l'autre. Cette information reste uniquement sur votre appareil et n'est jamais transmise à nos serveurs.
                 </p>
-                <h5 class="lang" key="privacy6">Third Party Disclosure</h5>
-                <p class="lead lang" key="privacyText6">
-                    We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others’ rights, property, or safety.
+
+                <h5 data-lang-fr="Partage de renseignements" data-lang-en="Information sharing">Partage de renseignements</h5>
+                <p class="lead" data-lang-fr="Nous ne vendons, n'échangeons ni ne transférons vos renseignements personnels à des tiers, sauf si la loi l'exige ou pour protéger nos droits, notre propriété ou notre sécurité." data-lang-en="We do not sell, trade, or transfer your personal information to third parties, except as required by law or to protect our rights, property, or safety.">
+                    Nous ne vendons, n'échangeons ni ne transférons vos renseignements personnels à des tiers, sauf si la loi l'exige ou pour protéger nos droits, notre propriété ou notre sécurité.
                 </p>
-                <p class="lead lang" key="termsText7">
-                    If there are any questions regarding this privacy policy you may contact us by email at: <a href="http://multibits.ca/">web@legare.ca</a>
+
+                <h5 data-lang-fr="Nous contacter" data-lang-en="Contact us">Nous contacter</h5>
+                <p class="lead" data-lang-fr="Pour toute question concernant cette politique de confidentialité, écrivez-nous à" data-lang-en="For any questions regarding this privacy policy, please email us at">
+                    Pour toute question concernant cette politique de confidentialité, écrivez-nous à
                 </p>
-                <p class="lead lang" key="termsText8">Last update: 2017-04-07</p>
+                <p class="lead"><a href="mailto:info@legare.ca">info@legare.ca</a></p>
+
+                <p class="lead" data-lang-fr="Dernière mise à jour : juillet 2026" data-lang-en="Last updated: July 2026">Dernière mise à jour : juillet 2026</p>
             </div>
         </div>
     </section>
 
-     <!-- Terms of use -->
-    <section id="terms">
-        <div class="section-content">
-            <div class="container">
-                <h3 class="lang" key="terms1">TERMS OF USE</h3>
-                <p class="lead lang" key="termsText1">
-                    This Terms of Use explains the operation principle of the Content Lockers on this website.
-                    On this website, you can encounter the Content Lockers which may ask
-                    you to sign in, subscribe, enter your name or perform other actions to get access to the locked content.
-                </p>
-                <h5 class="lang" key="terms2">Using your email address</h5>
-                <p class="lead lang" key="termsText2">
-                    When you enter your email or sign in through social networks, you agree to that your
-                    email address will be added to the subscription list for sending target news and special offers.
-                    You can unsubscribe at any time by clicking on the link at the end of any of emails received from us.
-                </p>
-                <h5 class="lang" key="terms3">Social Apps & Permissions</h5>
-                <p class="lead lang" key="termsText3">
-                    When you sign in through social networks, the Content Locker may ask you to grant
-                    permissions to read or perform some social actions.
-                    The Content Locker retrieves only the following information (according to the Privacy Policy of this website):
-                    <br />• Person name
-                    <br />• Email address
-                    <br />Content Locker never collects other data and never publish anything in social networks from your behalf without your permissions.
-                    After unlocking the content the Content Locker removes all the access tokens received from you and never uses them again.
-                    <br />Legare and sons does not disclose personal information to other parties unless requested by you or if required by law.
-                </p>    
-                <p class="lead lang" key="termsText4">    
-                    If there are any questions regarding this Terms of Use you may contact us by email at: <a href="http://multibits.ca/">web@legare.ca</a>
-                </p>
-                <p class="lead lang" key="termsText5">Last update: 2017-04-07</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer-->
     <footer id="footer-main">
         <section class="container">
-            <div class="row text-center">
-                <div class="col-sm-4">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" data-lang-fr="Accueil" data-lang-en="Home">Accueil</a></li>
+                        <li><a href="services.html" data-lang-fr="Services" data-lang-en="Services">Services</a></li>
+                        <li><a href="about.html" data-lang-fr="À propos" data-lang-en="About Us">À propos</a></li>
+                        <li><a href="contact.html" data-lang-fr="Contact" data-lang-en="Contact">Contact</a></li>
+                        <li><a href="privacy.html" data-lang-fr="Politique de confidentialité" data-lang-en="Privacy Policy">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
                     <address>
-                        <strong class="lang" key="legare">Legare &amp; Sons</strong><br />
+                        <strong>Légaré et Fils</strong><br />
                         118 chemin de la Rive Gauche<br />
                         St-Donat-de-Montcalm<br />
-                        Québec,  Canada  J0T 2C0
+                        Québec, Canada J0T 2C0
                     </address>
                 </div>
-                <div class="col-sm-4">
-                    <ul class="list-unstyled">
-                        <li><a class="lang" key="navHome" href="index.html">HOME</a></li>
-                        <li><a class="lang" key="navServices" href="services.html">SERVICES</a></li>
-                        <li><a class="lang" key="navAbout" href="about.html">ABOUT US</a></li>
-                        <li><a class="lang" key="navContact" href="contact.html">CONTACT US</a></li>
-                        <li><a class="lang" key="navLink" href="contact.html">LINK</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <ul class="list-unstyled">
-                        <li><a class="lang" key="navMission" href="#">MISSION</a></li>
-                        <li><a class="lang" key="nav1" href="#"></a></li>
-                        <li><a class="lang" key="nav1" href="#"></a></li>
-                        <li><a class="lang" key="navCredits" href="credits.html">CREDITS</a></li>
-                        <li><a class="lang" key="navTerms" href="privacy.html">TERMS OF USE</a></li>
-                        <li><a class="lang" key="navPrivacy" href="privacy.html">PRIVACY POLICY</a></li>
-                    </ul>
-                </div>
             </div>
-
-        </section>
-        <section id="copyright" class="text-center">
-            <a class="lang" key="copyright">© 2010 - 2017 Légaré et Fils, Commercial Transport Consultants Inc. All Rights Reserved.</a><br />
-            <a class="lang" key="website">Website design by </a><a href="http://multibits.ca/">Multibits Inc.</a>
+            <section id="copyright" class="text-center">
+                <span data-lang-fr="© 1967-2026 Légaré et Fils, Commercial Transport Consultants Inc. Tous droits réservés." data-lang-en="© 1967-2026 Légaré et Fils, Commercial Transport Consultants Inc. All Rights Reserved.">© 1967-2026 Légaré et Fils, Commercial Transport Consultants Inc. Tous droits réservés.</span><br />
+                <span data-lang-fr="Conception du site par " data-lang-en="Website design by ">Conception du site par </span><a href="https://multibits.ca/">Multibits Inc.</a>
+            </section>
         </section>
     </footer>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="Scripts/langue.js"></script>
-    <script src="Scripts/local-storage.js"></script>
-
-    <script type="text/javascript"> initPreference(); </script>
-
-</body >
-</html >
+    <script src="Scripts/i18n.js"></script>
+</body>
+</html>

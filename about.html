@@ -1,86 +1,78 @@
-﻿<!DOCTYPE html>
-<title class="lang" key="title">LEGARE &amp; SONS</title>
-<html>
+<!DOCTYPE html>
+<html lang="fr-CA">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- Bootstrap CSS -->
+    <title>À propos | Légaré et Fils</title>
+    <meta name="description" content="Légaré et Fils — entreprise familiale québécoise fondée en 1967, spécialisée en transport et logistique.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="Content/Style.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="http://www.legare.ca/favicon.ico">
+    <link rel="icon" type="image/png" href="Images/favicon.png" />
 </head>
 
 <body>
-    <!-- Main Navigation Bar -->
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded sticky-top" style="background-color: #ECEEEF">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#starNavbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded sticky-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#starNavbar" aria-controls="starNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="Images/LogoP_Légaré.png" alt="logo" /></a>
+        <a class="navbar-brand" href="index.html"><img src="Images/LogoP_Légaré.png" alt="Légaré et Fils"/></a>
         <div class="collapse navbar-collapse" id="starNavbar">
             <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" data-lang-fr="Accueil" data-lang-en="Home"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link lang" key="navServices" href="services.html">SERVICES</a>
+                    <a class="nav-link" href="services.html" data-lang-fr="Services" data-lang-en="Services">Services</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link lang" key="navAbout" href="about.html">ABOUT US<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="about.html" data-lang-fr="À propos" data-lang-en="About Us">À propos<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link lang" key="navContact" href="contact.html">CONTACT US</a>
+                    <a class="nav-link" href="contact.html" data-lang-fr="Contact" data-lang-en="Contact">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle lang" key="navLink" href="http://multibits.ca" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        MORE LINK
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang-fr="Nos entreprises" data-lang-en="Our Companies">Nos entreprises</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" id="premier" href="http://multibits.ca">Multibits inc.</a>
-                        <a class="dropdown-item" id="deuxième" href="http://jesuisungenie.com">Je Suis Un Génie</a>
-                        <a class="dropdown-item" id="troisième" href="http://plancherconfort.com">Plancher Confort Légaré inc.</a>
+                        <a class="dropdown-item" href="https://multibits.ca" target="_blank" rel="noopener">Multibits Inc.</a>
+                        <a class="dropdown-item" href="https://jesuisungenie.com" target="_blank" rel="noopener">Je Suis Un Génie</a>
+                        <a class="dropdown-item" href="https://plancherconfort.com" target="_blank" rel="noopener">Plancher Confort Légaré Inc.</a>
                     </div>
                 </li>
             </ul>
-            <h6><i class="navbar-text fa fa-phone"></i>&nbsp; (514) 990-2993&nbsp;&nbsp;&nbsp;</h6>
-            <h6><i class="navbar-text fa fa-envelope-o"></i>&nbsp; <a href="mailto:info@legare.ca">web@legare.ca</a>&nbsp;&nbsp;&nbsp;&nbsp;</h6>
-            <button class="btn btn-primary btn-sm" key="navConnexion" type="submit"><i class="fa fa-user-o"></i></button>&nbsp;
-            <button id="langue" class="btn btn-primary btn-sm translate lang" key="navLangue" type="submit">Français</button>&nbsp;
+            <span class="navbar-text mr-3"><i class="fa fa-phone"></i>&nbsp;(514) 990-2993</span>
+            <span class="navbar-text mr-3"><i class="fa fa-envelope-o"></i>&nbsp;<a href="mailto:info@legare.ca">info@legare.ca</a></span>
+            <button id="langToggle" class="btn btn-outline-primary btn-sm" type="button">English</button>
         </div>
     </nav>
 
-    <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-            <a href="http://www.SmarterASP.NET/index?r=mrpokerca">
-                <img src="http://www.SmarterASP.NET/affiliate/468x60.gif" border="0">
-            </a>
-            <br />
-            <h1 class="display-3 lang" key="jumbotron">SITE IN CONSTRUCTION</h1>
-            <p class="lead lang" key="jumbotron2">Section About</p>
+            <h1 class="display-4" data-lang-fr="À propos de nous" data-lang-en="About Us">À propos de nous</h1>
+            <p class="lead" data-lang-fr="Une histoire de famille, une expertise de plus de 55 ans." data-lang-en="A family story, over 55 years of expertise.">Une histoire de famille, une expertise de plus de 55 ans.</p>
         </div>
     </div>
 
-    <!-- About -->
     <section id="about-us">
         <div class="section-content">
             <div class="container">
                 <div class="about-text">
-                    <h3 class="lang" key="about">ABOUT US</h3>
-                    <p class="lead lang" key="aboutText">
-                        Légaré and Sons is a family-oriented business founded in 1967.  We originally offered invoice audition and warehousing services but the company undergone a massive expansion in 1984 and also started to offer personalized international transportation services.  The competences we acquired are the reason for which we stand out in the market and why we still offer these services to our customers today, all this at the best rates offered on the market.
+                    <h3 data-lang-fr="Notre histoire" data-lang-en="Our Story">Notre histoire</h3>
+                    <p class="lead" data-lang-fr="Légaré et Fils est une entreprise familiale fondée en 1967. Nous offrions à l'origine des services d'audit de factures et d'entreposage. En 1984, l'entreprise a connu une expansion majeure en ajoutant des services de transport international personnalisés à son offre. L'expertise acquise au fil des décennies fait notre différence sur le marché, et nous continuons d'offrir ces services à nos clients aux meilleurs tarifs du marché." data-lang-en="Légaré et Fils is a family-owned business founded in 1967. We originally offered invoice auditing and warehousing services. In 1984, the company underwent major expansion, adding personalized international transportation services to its offering. The expertise we've built over the decades sets us apart in the market, and we continue to offer these services to our clients at the best rates available.">
+                        Légaré et Fils est une entreprise familiale fondée en 1967. Nous offrions à l'origine des services d'audit de factures et d'entreposage. En 1984, l'entreprise a connu une expansion majeure en ajoutant des services de transport international personnalisés à son offre. L'expertise acquise au fil des décennies fait notre différence sur le marché, et nous continuons d'offrir ces services à nos clients aux meilleurs tarifs du marché.
+                    </p>
+
+                    <h3 data-lang-fr="Notre mission" data-lang-en="Our Mission">Notre mission</h3>
+                    <p class="lead" data-lang-fr="Offrir à nos clients des solutions de transport et de logistique fiables, personnalisées et au meilleur rapport qualité-prix, en misant sur une relation de confiance bâtie depuis plus d'un demi-siècle." data-lang-en="To provide our clients with reliable, personalized transportation and logistics solutions at the best value, built on a relationship of trust developed over more than half a century.">
+                        Offrir à nos clients des solutions de transport et de logistique fiables, personnalisées et au meilleur rapport qualité-prix, en misant sur une relation de confiance bâtie depuis plus d'un demi-siècle.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer-->
     <footer id="footer-main">
         <section class="container">
             <div class="row">
@@ -88,38 +80,32 @@
                 <div class="col-sm-2"></div>
                 <div class="col-sm-2">
                     <ul class="list-unstyled">
-                        <li><a class="lang" key="navHome" href="index.html">HOME</a></li>
-                        <li><a class="lang" key="navServices" href="services.html">SERVICES</a></li>
-                        <li><a class="lang" key="navAbout" href="about.html">ABOUT US</a></li>
-                        <li><a class="lang" key="navContact" href="contact.html">CONTACT US</a></li>
-                        <li><a class="lang" key="navLink" href="contact.html">LINK</a></li>
-                        <li><a class="lang" key="navCredits" href="credits.html">CREDITS</a></li>
+                        <li><a href="index.html" data-lang-fr="Accueil" data-lang-en="Home">Accueil</a></li>
+                        <li><a href="services.html" data-lang-fr="Services" data-lang-en="Services">Services</a></li>
+                        <li><a href="about.html" data-lang-fr="À propos" data-lang-en="About Us">À propos</a></li>
+                        <li><a href="contact.html" data-lang-fr="Contact" data-lang-en="Contact">Contact</a></li>
+                        <li><a href="privacy.html" data-lang-fr="Politique de confidentialité" data-lang-en="Privacy Policy">Politique de confidentialité</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6">
                     <address>
-                        <strong class="lang" key="legare">Legare &amp; Sons</strong><br />
+                        <strong>Légaré et Fils</strong><br />
                         118 chemin de la Rive Gauche<br />
                         St-Donat-de-Montcalm<br />
-                        Québec,  Canada  J0T 2C0
+                        Québec, Canada J0T 2C0
                     </address>
                 </div>
             </div>
-            <section class="text-center">
-                <a class="lang" key="copyright">© 2010 - 2017 Légaré et Fils, Commercial Transport Consultants Inc. All Rights Reserved.</a><br />
-                <a class="lang" key="website">Website design by </a><a href="http://multibits.ca/">Multibits Inc.</a>
+            <section id="copyright" class="text-center">
+                <span data-lang-fr="© 1967-2026 Légaré et Fils, Commercial Transport Consultants Inc. Tous droits réservés." data-lang-en="© 1967-2026 Légaré et Fils, Commercial Transport Consultants Inc. All Rights Reserved.">© 1967-2026 Légaré et Fils, Commercial Transport Consultants Inc. Tous droits réservés.</span><br />
+                <span data-lang-fr="Conception du site par " data-lang-en="Website design by ">Conception du site par </span><a href="https://multibits.ca/">Multibits Inc.</a>
             </section>
         </section>
     </footer>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="Scripts/langue.js"></script>
-    <script src="Scripts/local-storage.js"></script>
-    <script type="text/javascript">
-        initPreference();
-    </script>
+    <script src="Scripts/i18n.js"></script>
 </body>
 </html>
