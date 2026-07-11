@@ -1,0 +1,80 @@
+# Configuration Netlify pour Headers de Sécurité
+
+## Fichier netlify.toml (Configuration Alternative)
+
+Ce fichier est une alternative/complément au fichier `_headers`.
+Netlify supporte les deux formats.
+
+## À placer à la racine du projet
+
+```toml
+# Netlify Configuration
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+# Redirections et Headers
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+	# Force HTTPS avec HSTS
+	Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+	# Content Security Policy
+	Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maxcdn.bootstrapcdn.com https://code.jquery.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com; style-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com; img-src 'self' data: https:; font-src 'self' data: https://maxcdn.bootstrapcdn.com; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+
+	# Protection contre le clickjacking
+	X-Frame-Options = "SAMEORIGIN"
+
+	# Empêche le MIME sniffing
+	X-Content-Type-Options = "nosniff"
+
+	# Contrôle du referrer
+	Referrer-Policy = "strict-origin-when-cross-origin"
+
+	# Contrôle des permissions du navigateur
+	Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+
+	# Protection XSS (legacy)
+	X-XSS-Protection = "1; mode=block"
+
+# Redirection HTTP vers HTTPS (automatique sur Netlify)
+# Mais on peut forcer:
+[[redirects]]
+  from = "http://legare.ca/*"
+  to = "https://legare.ca/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.legare.ca/*"
+  to = "https://legare.ca/:splat"
+  status = 301
+  force = true
+
+# Build settings (si nécessaire)
+[build]
+  publish = "."
+  command = ""
+```
+
+---
+
+## Note
+
+Netlify utilisera automatiquement soit:
+- Le fichier `_headers` (déjà créé)
+- OU le fichier `netlify.toml` (celui-ci)
+- OU les deux (ils se complètent)
+
+Le fichier `_headers` est plus simple et recommandé.
+Ce fichier `netlify.toml` offre plus d'options avancées.
+
+---
+
+## Vérification après déploiement
+
+```bash
+curl -I https://legare.ca/
+```
+
+Vous devriez voir tous les headers de sécurité!
