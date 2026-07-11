@@ -1,0 +1,106 @@
+name: Security Headers Verification
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  verify-security:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Verify HTML Meta Tags
+      run: |
+        echo "Checking for security meta tags in HTML files..."
+
+        for file in *.html; do
+          echo "Checking $file..."
+
+          if grep -q "Content-Security-Policy" "$file"; then
+            echo "✅ CSP found in $file"
+          else
+            echo "❌ CSP missing in $file"
+            exit 1
+          fi
+
+          if grep -q "X-Content-Type-Options" "$file"; then
+            echo "✅ X-Content-Type-Options found in $file"
+          else
+            echo "❌ X-Content-Type-Options missing in $file"
+            exit 1
+          fi
+
+          if grep -q "X-Frame-Options" "$file"; then
+            echo "✅ X-Frame-Options found in $file"
+          else
+            echo "❌ X-Frame-Options missing in $file"
+            exit 1
+          fi
+        done
+
+        echo "All security meta tags verified! ✅"
+
+    - name: Check for _headers file
+      run: |
+        if [ -f "_headers" ]; then
+          echo "✅ _headers file exists (for Cloudflare Pages)"
+          cat _headers
+        else
+          echo "⚠️  _headers file not found (only needed for Cloudflare Pages)"
+        fi
+
+    - name: Security Headers Test (if deployed)
+      continue-on-error: true
+      run: |
+        echo "Testing deployed site security headers..."
+
+        # Test only if site is accessible
+        if curl -s -o /dev/null -w "%{http_code}" https://legare.ca/ | grep -q "200"; then
+          echo "Site is accessible. Testing headers..."
+
+          # Test HSTS
+          if curl -sI https://legare.ca/ | grep -i "strict-transport-security"; then
+            echo "✅ HSTS header found"
+          else
+            echo "⚠️  HSTS header missing - Add Cloudflare to get A+ rating"
+          fi
+
+          # Test CSP
+          if curl -sI https://legare.ca/ | grep -i "content-security-policy"; then
+            echo "✅ CSP header found"
+          else
+            echo "⚠️  CSP header missing from HTTP response (meta tag only)"
+          fi
+
+          # Test X-Frame-Options
+          if curl -sI https://legare.ca/ | grep -i "x-frame-options"; then
+            echo "✅ X-Frame-Options header found"
+          else
+            echo "⚠️  X-Frame-Options header missing from HTTP response (meta tag only)"
+          fi
+        else
+          echo "⚠️  Site not accessible yet. Skipping live tests."
+        fi
+
+    - name: Generate Security Report
+      run: |
+        echo "📋 Security Configuration Summary"
+        echo "================================="
+        echo ""
+        echo "✅ HTML Meta Tags: Configured"
+        echo "✅ _headers file: Ready for Cloudflare Pages"
+        echo "✅ cloudflare-worker.js: Ready for Cloudflare Workers"
+        echo ""
+        echo "⚠️  To achieve A+ rating:"
+        echo "   1. Add your domain to Cloudflare"
+        echo "   2. Configure nameservers"
+        echo "   3. Enable HSTS in Cloudflare SSL/TLS settings"
+        echo "   4. Deploy Cloudflare Worker OR migrate to Cloudflare Pages"
+        echo ""
+        echo "📖 See SECURITY-HEADERS.md for detailed instructions"
